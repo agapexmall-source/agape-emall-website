@@ -2,7 +2,14 @@ import React from 'react';
 
 export interface PhoneMockupProps {
   src?: string;
-  activeScreen?: 'home' | 'hotdeals' | 'listing' | 'productlisting' | 'details' | 'detailspage' | 'seller';
+  activeScreen?:
+    | 'home'
+    | 'hotdeals'
+    | 'listing'
+    | 'productlisting'
+    | 'details'
+    | 'detailspage'
+    | 'seller';
   alt?: string;
   className?: string;
   id?: string;
@@ -10,10 +17,10 @@ export interface PhoneMockupProps {
 }
 
 const screenshotMap: Record<string, string> = {
-  home: '/screenshots/homepage(1).jpeg',
-  hotdeals: '/screenshots/hotdeals(1).jpeg',
-  listing: '/screenshots/hotdeals(1).jpeg',
-  productlisting: '/screenshots/productlisting(1).jpeg',
+  home: '/screenshots/homepage.jpeg',
+  hotdeals: '/screenshots/hotdeals.jpeg',
+  listing: '/screenshots/hotdeals.jpeg',
+  productlisting: '/screenshots/productlisting.jpeg',
   details: '/screenshots/details_page.jpeg',
   detailspage: '/screenshots/detailspage.jpeg',
   seller: '/screenshots/seller_info.jpeg',
@@ -22,37 +29,42 @@ const screenshotMap: Record<string, string> = {
 export const PhoneMockup: React.FC<PhoneMockupProps> = ({
   src,
   activeScreen = 'home',
-  alt = 'Agape Mall Mobile App',
+  alt = 'Agape Mall mobile app screenshot',
   className = '',
   id,
   priority = false,
 }) => {
-  const imageSrc = src || screenshotMap[activeScreen] || screenshotMap.home;
+  const imageSrc =
+    src || screenshotMap[activeScreen] || screenshotMap.home;
 
   return (
     <div
       id={id}
-      className={`relative mx-auto w-[280px] sm:w-[310px] md:w-[330px] rounded-[44px] bg-[#062019] p-2.5 sm:p-3 shadow-2xl border-4 border-[#0C3229] ring-1 ring-black/30 group ${className}`}
+      className={`relative mx-auto ${className}`}
     >
-      {/* Smartphone Dynamic Island / Speaker Notch */}
-      <div className="absolute top-3 left-1/2 -translate-x-1/2 w-28 h-5 bg-black rounded-full z-30 flex items-center justify-between px-3 shadow-md pointer-events-none">
-        <div className="w-2.5 h-2.5 bg-[#0C3229] rounded-full border border-slate-700"></div>
-        <div className="w-10 h-1 bg-slate-800 rounded-full"></div>
-      </div>
+      {/* Outer phone body */}
+      <div className="relative rounded-[38px] bg-[#111614] p-[7px] shadow-[0_28px_70px_rgba(0,0,0,0.30)] ring-1 ring-black/30">
+        
+        {/* Metallic / bezel edge */}
+        <div className="rounded-[34px] bg-[#202623] p-[3px] ring-1 ring-white/10">
+          
+          {/* Real screenshot */}
+          <div className="overflow-hidden rounded-[31px] bg-black">
+            <img
+              src={imageSrc}
+              alt={alt}
+              loading={priority ? 'eager' : 'lazy'}
+              fetchPriority={priority ? 'high' : 'auto'}
+              className="block h-auto w-full object-contain"
+            />
+          </div>
+        </div>
 
-      {/* Screen Frame Container */}
-      <div className="relative w-full aspect-[9/19.5] bg-black rounded-[36px] overflow-hidden z-10 shadow-inner">
-        <img
-          src={imageSrc}
-          alt={alt}
-          loading={priority ? 'eager' : 'lazy'}
-          referrerPolicy="no-referrer"
-          className="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
-        />
+        {/* Very subtle side buttons */}
+        <div className="pointer-events-none absolute -left-[3px] top-[22%] h-12 w-[3px] rounded-l bg-[#252b28]" />
+        <div className="pointer-events-none absolute -left-[3px] top-[34%] h-16 w-[3px] rounded-l bg-[#252b28]" />
+        <div className="pointer-events-none absolute -right-[3px] top-[28%] h-20 w-[3px] rounded-r bg-[#252b28]" />
       </div>
-
-      {/* Glossy Screen Overlay */}
-      <div className="absolute inset-0 rounded-[44px] bg-gradient-to-tr from-white/0 via-white/5 to-white/0 pointer-events-none z-20"></div>
     </div>
   );
 };

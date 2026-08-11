@@ -1,126 +1,192 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import {
+  CheckCircle2,
+  Mail,
+  MapPin,
+  Phone,
+  ShieldCheck,
+} from 'lucide-react';
 import { Container } from '../common/Container';
 import { companyConfig } from '../../config/company';
 
 export const Footer: React.FC = () => {
   return (
-    <footer id="agape-main-footer" className="bg-[#062019] text-slate-300 pt-16 pb-12 border-t border-[#D3B15F]/20">
+    <footer
+      id="agape-main-footer"
+      className="border-t border-[#D3B15F]/20 bg-[#062019] pb-12 pt-16 text-slate-300"
+    >
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-[#D3B15F]/20">
-          {/* Official Brand Logo & Information */}
-          <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="inline-block group focus:outline-none">
-              <div className="p-1.5 rounded-2xl bg-[#0C3229] border border-[#D3B15F]/40 shadow-sm inline-flex items-center group-hover:border-[#D3B15F] transition-all">
-                <img
-                  src="/logo.png"
-                  alt="AGAPE e-MALL Logo"
-                  className="h-12 w-auto object-contain rounded-xl"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
+        <div className="grid grid-cols-1 gap-10 border-b border-[#D3B15F]/20 pb-12 md:grid-cols-2 lg:grid-cols-5">
+          <div className="space-y-4 lg:col-span-2">
+            <Link
+              to="/"
+              className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D3B15F]"
+              aria-label="Agape Mall home"
+            >
+              <img
+                src="/brand/logo.png"
+                alt="AGAPE e-MALL"
+                className="h-16 w-16 rounded-2xl object-contain"
+              />
             </Link>
-            <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
-              Agape Mall empowers buyers to discover great local deals and gives sellers direct access to thousands of daily active customers across Ghana.
+
+            <p className="max-w-sm text-sm leading-relaxed text-slate-300">
+              Agape Mall empowers buyers to discover great local
+              deals and gives sellers direct access to thousands
+              of daily active customers across Ghana.
             </p>
-            <div className="pt-2 flex flex-col gap-2.5 text-xs text-slate-200">
-              <div className="flex items-center gap-2.5">
-                <MapPin className="w-4 h-4 text-[#D3B15F] shrink-0" />
-                <span>{companyConfig.businessAddress}</span>
+
+            <div className="flex flex-col gap-2.5 pt-2 text-xs text-slate-200">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#D3B15F]" />
+                <span>
+                  {companyConfig.businessAddress}
+                </span>
               </div>
+
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 text-[#D3B15F] shrink-0" />
-                <span>{companyConfig.businessPhone}</span>
+                <Phone className="h-4 w-4 shrink-0 text-[#D3B15F]" />
+                <span>
+                  {companyConfig.businessPhone}
+                </span>
               </div>
+
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 text-[#D3B15F] shrink-0" />
-                <span>{companyConfig.businessEmail}</span>
+                <Mail className="h-4 w-4 shrink-0 text-[#D3B15F]" />
+                <span>
+                  {companyConfig.businessEmail}
+                </span>
               </div>
             </div>
           </div>
 
-          {/* Navigation Links */}
           <div>
-            <h3 className="text-xs font-extrabold text-[#D3B15F] uppercase tracking-wider mb-4 border-b border-[#D3B15F]/20 pb-2">
+            <h3 className="mb-4 border-b border-[#D3B15F]/20 pb-2 text-xs font-extrabold uppercase tracking-wider text-[#D3B15F]">
               Marketplace
             </h3>
+
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   Home
                 </Link>
               </li>
+
               <li>
-                <Link to="/about" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/about"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   About Agape Mall
                 </Link>
               </li>
+
               <li>
-                <Link to="/buyers" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/buyers"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   For Buyers
                 </Link>
               </li>
+
               <li>
-                <Link to="/sellers" className="hover:text-[#D3B15F] transition-colors">
-                  For Sellers & Merchants
+                <Link
+                  to="/sellers"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
+                  For Sellers &amp; Merchants
                 </Link>
               </li>
+
               <li>
-                <Link to="/download" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/download"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   Download Mobile App
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Support & Resources */}
           <div>
-            <h3 className="text-xs font-extrabold text-[#D3B15F] uppercase tracking-wider mb-4 border-b border-[#D3B15F]/20 pb-2">
-              Support & Help
+            <h3 className="mb-4 border-b border-[#D3B15F]/20 pb-2 text-xs font-extrabold uppercase tracking-wider text-[#D3B15F]">
+              Support &amp; Help
             </h3>
+
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/support" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/support"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   Help Center
                 </Link>
               </li>
+
               <li>
-                <Link to="/faq" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/faq"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   Frequently Asked Questions
                 </Link>
               </li>
+
               <li>
-                <Link to="/safety" className="hover:text-[#D3B15F] transition-colors">
-                  Safety & Anti-Fraud Tips
+                <Link
+                  to="/safety"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
+                  Safety &amp; Anti-Fraud Tips
                 </Link>
               </li>
+
               <li>
-                <Link to="/contact" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/contact"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   Contact Customer Support
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Legal & Account */}
           <div>
-            <h3 className="text-xs font-extrabold text-[#D3B15F] uppercase tracking-wider mb-4 border-b border-[#D3B15F]/20 pb-2">
-              Legal & Policies
+            <h3 className="mb-4 border-b border-[#D3B15F]/20 pb-2 text-xs font-extrabold uppercase tracking-wider text-[#D3B15F]">
+              Legal &amp; Policies
             </h3>
+
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link to="/privacy" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/privacy"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   Privacy Policy
                 </Link>
               </li>
+
               <li>
-                <Link to="/terms" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/terms"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   Terms of Service
                 </Link>
               </li>
+
               <li>
-                <Link to="/account-deletion" className="hover:text-[#D3B15F] transition-colors">
+                <Link
+                  to="/account-deletion"
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   Account Deletion Request
                 </Link>
               </li>
@@ -128,20 +194,28 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-          <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#D3B15F]" />
+        <div className="flex flex-col items-start justify-between gap-4 pt-8 text-xs text-slate-400 md:flex-row md:items-center">
+          <div className="flex items-start gap-2">
+            <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-[#D3B15F]" />
+
             <span>
-              © {new Date().getFullYear()} {companyConfig.legalCompanyName}. All rights reserved. Registered under Reg. No. {companyConfig.companyRegistrationNumber}.
+              © {new Date().getFullYear()}{' '}
+              {companyConfig.legalCompanyName}. All rights
+              reserved. Registered under Reg. No.{' '}
+              {companyConfig.companyRegistrationNumber}.
             </span>
           </div>
-          <div className="flex items-center gap-4">
+
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <span className="flex items-center gap-1.5 text-slate-300">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#D3B15F]" />
+              <CheckCircle2 className="h-3.5 w-3.5 text-[#D3B15F]" />
               Official Agape Mall Portal
             </span>
-            <span>Ghana Jurisdiction ({companyConfig.jurisdiction})</span>
+
+            <span>
+              Ghana Jurisdiction (
+              {companyConfig.jurisdiction})
+            </span>
           </div>
         </div>
       </Container>

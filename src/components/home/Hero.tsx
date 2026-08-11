@@ -1,142 +1,154 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, ShieldCheck, Sparkles, Store, Users, CheckCircle2 } from 'lucide-react';
+import {
+  ArrowRight,
+  ShieldCheck,
+  Sparkles,
+  Store,
+  Users,
+} from 'lucide-react';
 import { Container } from '../common/Container';
 import { AppStoreButtons } from '../common/AppStoreButtons';
-import { QRCodeGenerator } from '../common/QRCodeGenerator';
 import { PhoneMockup } from '../common/PhoneMockup';
 
 export const Hero: React.FC = () => {
   return (
-    <section id="hero-section" className="relative bg-[#0C3229] text-white pt-28 sm:pt-36 pb-20 overflow-hidden border-b border-[#D3B15F]/20">
-      {/* Brand Background Glow Filters */}
-      <div className="absolute top-1/4 left-10 w-96 h-96 bg-[#D3B15F]/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#062019]/80 rounded-full blur-3xl pointer-events-none"></div>
+    <section
+      id="hero-section"
+      className="relative overflow-hidden border-b border-[#D3B15F]/20 bg-[#0C3229] pb-20 pt-28 text-white sm:pt-36"
+    >
+      <div className="pointer-events-none absolute left-[-120px] top-24 h-[360px] w-[360px] rounded-full bg-[#D3B15F]/10 blur-3xl" />
+      <div className="pointer-events-none absolute bottom-[-180px] right-[-100px] h-[520px] w-[520px] rounded-full bg-[#062019] blur-3xl" />
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          {/* Left Column Text Content */}
-          <div className="lg:col-span-6 text-left space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#062019] border border-[#D3B15F]/40 text-[#D3B15F] text-xs sm:text-sm font-extrabold tracking-wide shadow-sm">
-              <Sparkles className="w-4 h-4 text-[#D3B15F]" />
-              <span>Ghana's Official Agape Mall Web Portal</span>
+        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-10">
+          <div className="space-y-6 text-left lg:col-span-6">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#D3B15F]/40 bg-[#062019]/70 px-3.5 py-1.5 text-xs font-extrabold tracking-wide text-[#D3B15F] sm:text-sm">
+              <Sparkles className="h-4 w-4" />
+              <span>Ghana&apos;s Official Agape Mall Web Portal</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-[1.15]">
-              Buy & Sell Everything <br className="hidden sm:inline" />
-              <span className="text-[#D3B15F]">
-                Easily in Ghana
-              </span>
+            <h1 className="text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              Buy &amp; Sell Everything
+              <br className="hidden sm:block" />
+              <span className="text-[#D3B15F]"> Easily in Ghana</span>
             </h1>
 
-            <p className="text-base sm:text-xl text-slate-200 leading-relaxed font-normal max-w-2xl">
-              Connect directly with verified buyers and trusted sellers across Ghana. Browse smartphones, electronics, vehicles, real estate, fashion, and everyday goods on the Agape Mall mobile app.
+            <p className="max-w-2xl text-base leading-relaxed text-slate-200 sm:text-xl">
+              Connect directly with verified buyers and trusted sellers across
+              Ghana. Browse smartphones, electronics, vehicles, real estate,
+              fashion, and everyday goods on the Agape Mall mobile app.
             </p>
 
-            {/* CTA Buttons & App Store Links */}
-            <div className="pt-2 space-y-4">
+            <div className="space-y-4 pt-2">
               <div className="flex flex-wrap items-center gap-4">
                 <Link
                   to="/download"
-                  className="inline-flex items-center gap-2.5 bg-[#D3B15F] hover:bg-[#CEAE66] text-[#062019] font-black text-base px-6 py-3.5 rounded-xl shadow-lg shadow-[#062019]/50 hover:scale-[1.02] active:scale-95 transition-all duration-200"
+                  className="inline-flex items-center gap-2.5 rounded-xl bg-[#D3B15F] px-6 py-3.5 text-base font-black text-[#062019] shadow-lg transition-colors duration-200 hover:bg-[#CEAE66]"
                 >
                   <span>Download Mobile App</span>
-                  <ArrowRight className="w-5 h-5 text-[#062019]" />
+                  <ArrowRight className="h-5 w-5" />
                 </Link>
+
                 <Link
                   to="/sellers"
-                  className="inline-flex items-center gap-2 bg-[#062019] hover:bg-[#062019]/80 text-white hover:text-[#D3B15F] font-bold text-base px-5 py-3.5 rounded-xl border border-[#D3B15F]/30 transition-all duration-200"
+                  className="inline-flex items-center gap-2 rounded-xl border border-[#D3B15F]/35 bg-[#062019] px-5 py-3.5 text-base font-bold text-white transition-colors duration-200 hover:border-[#D3B15F]/60 hover:text-[#D3B15F]"
                 >
-                  <Store className="w-5 h-5 text-[#D3B15F]" />
+                  <Store className="h-5 w-5 text-[#D3B15F]" />
                   <span>Start Selling Free</span>
                 </Link>
               </div>
 
               <div className="pt-2">
-                <div className="text-xs font-bold text-[#D3B15F] uppercase tracking-wider mb-2">
-                  Available for iOS & Android
+                <div className="mb-2 text-xs font-bold uppercase tracking-wider text-[#D3B15F]">
+                  Available for iOS &amp; Android
                 </div>
+
                 <AppStoreButtons layout="row" size="md" />
               </div>
             </div>
 
-            {/* Quick Highlights */}
-            <div className="pt-6 border-t border-[#D3B15F]/20 grid grid-cols-3 gap-4 text-center sm:text-left">
+            <div className="grid grid-cols-3 gap-4 border-t border-[#D3B15F]/20 pt-6 text-center sm:text-left">
               <div className="space-y-1">
-                <div className="flex items-center gap-1.5 text-[#D3B15F] justify-center sm:justify-start">
-                  <Users className="w-4 h-4" />
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider">Community</span>
+                <div className="flex items-center justify-center gap-1.5 text-[#D3B15F] sm:justify-start">
+                  <Users className="h-4 w-4" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider sm:text-xs">
+                    Community
+                  </span>
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-white">50K+</div>
-                <div className="text-xs text-slate-300">Active Buyers</div>
+
+                <div className="text-xl font-black text-white sm:text-2xl">
+                  50K+
+                </div>
+
+                <div className="text-xs text-slate-300">
+                  Active Buyers
+                </div>
               </div>
 
               <div className="space-y-1">
-                <div className="flex items-center gap-1.5 text-[#D3B15F] justify-center sm:justify-start">
-                  <Store className="w-4 h-4" />
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider">Merchants</span>
+                <div className="flex items-center justify-center gap-1.5 text-[#D3B15F] sm:justify-start">
+                  <Store className="h-4 w-4" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider sm:text-xs">
+                    Merchants
+                  </span>
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-white">10K+</div>
-                <div className="text-xs text-slate-300">Verified Sellers</div>
+
+                <div className="text-xl font-black text-white sm:text-2xl">
+                  10K+
+                </div>
+
+                <div className="text-xs text-slate-300">
+                  Verified Sellers
+                </div>
               </div>
 
               <div className="space-y-1">
-                <div className="flex items-center gap-1.5 text-[#D3B15F] justify-center sm:justify-start">
-                  <ShieldCheck className="w-4 h-4" />
-                  <span className="text-[10px] sm:text-xs font-bold uppercase tracking-wider">Trust</span>
+                <div className="flex items-center justify-center gap-1.5 text-[#D3B15F] sm:justify-start">
+                  <ShieldCheck className="h-4 w-4" />
+                  <span className="text-[10px] font-bold uppercase tracking-wider sm:text-xs">
+                    Trust
+                  </span>
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-white">100%</div>
-                <div className="text-xs text-slate-300">Direct Contact</div>
+
+                <div className="text-xl font-black text-white sm:text-2xl">
+                  100%
+                </div>
+
+                <div className="text-xs text-slate-300">
+                  Direct Contact
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: 3-Phone Showcase of Real Mobile Screenshots */}
-          <div className="lg:col-span-6 relative flex items-center justify-center pt-8 lg:pt-0">
-            {/* Background Radial Glow */}
-            <div className="absolute inset-0 bg-[#D3B15F]/10 rounded-full blur-2xl pointer-events-none"></div>
+          <div className="relative flex items-center justify-center lg:col-span-6">
+            <div className="pointer-events-none absolute h-[420px] w-[420px] rounded-full bg-[#D3B15F]/10 blur-3xl" />
 
-            <div className="relative w-full max-w-lg mx-auto min-h-[460px] sm:min-h-[520px] flex items-center justify-center">
-              {/* Secondary Screen Left: Hot Deals */}
-              <div className="absolute left-0 sm:-left-4 top-8 sm:top-10 z-10 -rotate-6 scale-85 sm:scale-90 opacity-90 hover:opacity-100 hover:rotate-0 hover:z-30 transition-all duration-300 hidden xs:block">
+            <div className="relative mx-auto flex min-h-[550px] w-full max-w-[560px] items-center justify-center sm:min-h-[610px]">
+              <div className="absolute left-0 top-24 z-10 hidden w-[175px] -rotate-2 opacity-75 xl:block">
                 <PhoneMockup
                   activeScreen="hotdeals"
-                  alt="Agape Mall Hot Deals"
-                  className="w-[200px] sm:w-[240px]"
+                  alt="Agape Mall Hot Deals screen"
+                  className="w-full"
                 />
               </div>
 
-              {/* Main Primary Phone Center: Homepage */}
-              <div className="relative z-20 scale-100 hover:scale-[1.02] transition-transform duration-300 drop-shadow-2xl">
+              <div className="relative z-20 w-[245px] sm:w-[285px] lg:w-[300px]">
                 <PhoneMockup
                   activeScreen="home"
-                  alt="Agape Mall App Homepage"
-                  priority={true}
-                  className="w-[260px] sm:w-[290px]"
+                  alt="Agape Mall app homepage"
+                  priority
+                  className="w-full"
                 />
-
-                {/* Floating Feature Badge */}
-                <div className="absolute -top-4 -right-4 sm:-right-8 bg-[#062019] border border-[#D3B15F] text-white p-3 rounded-2xl shadow-xl z-30 flex items-center gap-2.5 backdrop-blur-md">
-                  <CheckCircle2 className="w-5 h-5 text-[#D3B15F] shrink-0" />
-                  <div className="text-left text-xs">
-                    <div className="font-extrabold text-white">Real Mobile App</div>
-                    <div className="text-slate-300 text-[10px]">Ghana Marketplace</div>
-                  </div>
-                </div>
               </div>
 
-              {/* Supporting Screen Right: Product Details */}
-              <div className="absolute right-0 sm:-right-4 top-12 sm:top-14 z-10 rotate-6 scale-85 sm:scale-90 opacity-90 hover:opacity-100 hover:rotate-0 hover:z-30 transition-all duration-300 hidden xs:block">
+              <div className="absolute right-0 top-32 z-10 hidden w-[175px] rotate-2 opacity-75 xl:block">
                 <PhoneMockup
                   activeScreen="details"
-                  alt="Agape Mall Product Details Page"
-                  className="w-[200px] sm:w-[240px]"
+                  alt="Agape Mall product details screen"
+                  className="w-full"
                 />
-              </div>
-
-              {/* Floating QR Code Badge on Desktop */}
-              <div className="absolute -bottom-6 -left-2 hidden xl:block z-30">
-                <QRCodeGenerator size={110} />
               </div>
             </div>
           </div>

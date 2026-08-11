@@ -1,19 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ArrowRight, Download } from 'lucide-react';
+import { Download, Menu, X } from 'lucide-react';
 import { Container } from '../common/Container';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] =
+    useState(false);
+
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    return () =>
+      window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -33,38 +40,42 @@ export const Header: React.FC = () => {
   return (
     <header
       id="agape-main-header"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#062019]/95 backdrop-blur-md text-white shadow-xl py-2.5 border-b border-[#D3B15F]/30'
-          : 'bg-[#0C3229] text-white py-3.5 border-b border-[#D3B15F]/20'
+          ? 'border-[#D3B15F]/25 bg-[#062019]/95 py-2 shadow-lg backdrop-blur-md'
+          : 'border-[#D3B15F]/20 bg-[#0C3229] py-3'
       }`}
     >
       <Container>
         <div className="flex items-center justify-between gap-4">
-          {/* Official Logo */}
-          <Link to="/" className="flex items-center gap-3 shrink-0 group focus:outline-none">
-            <div className="p-1 rounded-xl bg-[#062019] border border-[#D3B15F]/40 shadow-sm group-hover:border-[#D3B15F] transition-all flex items-center justify-center overflow-hidden">
-              <img
-                src="/logo.png"
-                alt="AGAPE e-MALL Logo"
-                className="h-9 w-auto max-w-[140px] sm:max-w-[160px] object-contain rounded-lg"
-                referrerPolicy="no-referrer"
-              />
-            </div>
+          <Link
+            to="/"
+            className="flex shrink-0 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D3B15F]"
+            aria-label="Agape Mall home"
+          >
+            <img
+              src="/brand/logo.png"
+              alt="AGAPE e-MALL"
+              className="h-11 w-11 rounded-xl object-contain sm:h-12 sm:w-12"
+            />
           </Link>
 
-          {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+          <nav
+            className="hidden items-center gap-1 lg:flex xl:gap-2"
+            aria-label="Main navigation"
+          >
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive =
+                location.pathname === link.path;
+
               return (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-3 py-1.5 rounded-lg text-sm font-semibold transition-all ${
+                  className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
                     isActive
-                      ? 'text-[#D3B15F] bg-[#062019] border border-[#D3B15F]/30 shadow-xs'
-                      : 'text-slate-200 hover:text-[#D3B15F] hover:bg-[#062019]/60'
+                      ? 'bg-[#062019] text-[#D3B15F] ring-1 ring-[#D3B15F]/30'
+                      : 'text-slate-100 hover:bg-[#062019]/60 hover:text-[#D3B15F]'
                   }`}
                 >
                   {link.name}
@@ -73,59 +84,75 @@ export const Header: React.FC = () => {
             })}
           </nav>
 
-          {/* Download App CTA */}
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
+          <div className="hidden shrink-0 sm:flex">
             <Link
               to="/download"
-              className="inline-flex items-center gap-2 bg-[#D3B15F] hover:bg-[#CEAE66] text-[#062019] font-extrabold text-sm px-4 py-2.5 rounded-xl shadow-md transition-all duration-200 hover:shadow-lg hover:shadow-[#D3B15F]/20 active:scale-95"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#D3B15F] px-4 py-2.5 text-sm font-extrabold text-[#062019] shadow-md transition-colors hover:bg-[#CEAE66]"
             >
-              <Download className="w-4 h-4 text-[#062019]" />
+              <Download className="h-4 w-4" />
               <span>Get Mobile App</span>
             </Link>
           </div>
 
-          {/* Mobile Menu Toggle Button */}
           <button
             type="button"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-xl text-slate-200 hover:text-[#D3B15F] hover:bg-[#062019] focus:outline-none border border-transparent hover:border-[#D3B15F]/30"
-            aria-label="Toggle Navigation Menu"
+            onClick={() =>
+              setIsMobileMenuOpen((open) => !open)
+            }
+            className="rounded-xl border border-[#D3B15F]/20 p-2 text-slate-100 transition-colors hover:bg-[#062019] hover:text-[#D3B15F] lg:hidden"
+            aria-label={
+              isMobileMenuOpen
+                ? 'Close navigation menu'
+                : 'Open navigation menu'
+            }
+            aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
 
-        {/* Mobile Navigation Drawer */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-3 pt-3 border-t border-[#D3B15F]/20 flex flex-col gap-1.5 pb-2 animate-in slide-in-from-top-2 duration-200">
+          <nav
+            className="mt-3 flex flex-col gap-1.5 border-t border-[#D3B15F]/20 pb-2 pt-3 lg:hidden"
+            aria-label="Mobile navigation"
+          >
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive =
+                location.pathname === link.path;
+
               return (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`px-4 py-2.5 rounded-xl text-base font-semibold transition-colors flex items-center justify-between ${
+                  className={`flex items-center justify-between rounded-xl px-4 py-2.5 text-base font-semibold transition-colors ${
                     isActive
-                      ? 'bg-[#062019] text-[#D3B15F] font-bold border border-[#D3B15F]/40'
-                      : 'text-slate-200 hover:bg-[#062019] hover:text-[#D3B15F]'
+                      ? 'border border-[#D3B15F]/30 bg-[#062019] text-[#D3B15F]'
+                      : 'text-slate-100 hover:bg-[#062019] hover:text-[#D3B15F]'
                   }`}
                 >
                   <span>{link.name}</span>
-                  {isActive && <span className="w-2 h-2 rounded-full bg-[#D3B15F]"></span>}
+
+                  {isActive && (
+                    <span className="h-2 w-2 rounded-full bg-[#D3B15F]" />
+                  )}
                 </Link>
               );
             })}
 
-            <div className="pt-3 mt-2 border-t border-[#D3B15F]/20 flex flex-col gap-2">
+            <div className="mt-2 border-t border-[#D3B15F]/20 pt-3 sm:hidden">
               <Link
                 to="/download"
-                className="w-full text-center bg-[#D3B15F] hover:bg-[#CEAE66] text-[#062019] font-extrabold text-base py-3 rounded-xl shadow-md flex items-center justify-center gap-2"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#D3B15F] py-3 text-base font-extrabold text-[#062019]"
               >
-                <Download className="w-5 h-5" />
-                <span>Download App Free</span>
+                <Download className="h-5 w-5" />
+                <span>Download App</span>
               </Link>
             </div>
-          </div>
+          </nav>
         )}
       </Container>
     </header>
