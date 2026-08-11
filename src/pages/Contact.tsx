@@ -43,7 +43,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <div id="contact-page" className="pt-28 pb-20 bg-slate-50 min-h-screen">
+    <div id="contact-page" className="pt-28 pb-20 bg-[#F7F6F2] min-h-screen">
       <Container>
         <SectionHeader
           badge="Get in Touch"
@@ -54,65 +54,65 @@ export const Contact: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 max-w-6xl mx-auto">
           {/* Left Contact Info */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-slate-900 text-white p-8 rounded-3xl border border-slate-800 shadow-xl space-y-6">
+            <div className="bg-[#0C3229] text-white p-8 rounded-3xl border border-[#D3B15F]/30 shadow-xl space-y-6">
               <div>
                 <h3 className="text-xl font-extrabold text-white">Corporate Contact</h3>
-                <p className="text-xs text-slate-400 mt-1">Official headquarters and support channels</p>
+                <p className="text-xs text-slate-300 mt-1">Official headquarters and support channels</p>
               </div>
 
-              <div className="space-y-4 text-xs text-slate-300">
+              <div className="space-y-4 text-xs text-slate-200">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-600/30 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#062019] text-[#D3B15F] flex items-center justify-center shrink-0 mt-0.5 border border-[#D3B15F]/30">
                     <MapPin className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-bold text-white">Physical Address</div>
-                    <p className="text-slate-400">{companyConfig.businessAddress}</p>
+                    <p className="text-slate-300">{companyConfig.businessAddress}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-600/30 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#062019] text-[#D3B15F] flex items-center justify-center shrink-0 mt-0.5 border border-[#D3B15F]/30">
                     <Phone className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-bold text-white">Customer Helpline</div>
-                    <p className="text-slate-400">{companyConfig.businessPhone}</p>
+                    <p className="text-slate-300">{companyConfig.businessPhone}</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-emerald-600/30 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#062019] text-[#D3B15F] flex items-center justify-center shrink-0 mt-0.5 border border-[#D3B15F]/30">
                     <Mail className="w-4 h-4" />
                   </div>
                   <div>
                     <div className="font-bold text-white">Support Email</div>
-                    <p className="text-slate-400">{companyConfig.supportEmail}</p>
+                    <p className="text-slate-300">{companyConfig.supportEmail}</p>
                   </div>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-800 text-[11px] text-slate-400">
-                <span className="font-bold text-emerald-400">Business Hours:</span> Monday – Saturday, 8:00 AM – 6:00 PM GMT
+              <div className="pt-4 border-t border-[#D3B15F]/20 text-[11px] text-slate-300">
+                <span className="font-bold text-[#D3B15F]">Business Hours:</span> Monday – Saturday, 8:00 AM – 6:00 PM GMT
               </div>
             </div>
           </div>
 
           {/* Right Contact Form */}
-          <div className="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-sm space-y-6">
-            <h3 className="text-xl font-extrabold text-slate-900">Send Us a Direct Message</h3>
+          <div className="lg:col-span-7 bg-white p-8 rounded-3xl border border-slate-200 shadow-xs space-y-6">
+            <h3 className="text-xl font-extrabold text-[#171A18]">Send Us a Direct Message</h3>
 
             {status === 'success' ? (
-              <div className="p-6 bg-emerald-50 border border-emerald-200 rounded-2xl text-emerald-900 space-y-2">
+              <div className="p-6 bg-[#F7F6F2] border border-[#0C3229]/20 rounded-2xl text-[#0C3229] space-y-2">
                 <div className="flex items-center gap-2 font-extrabold text-base">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-600" /> Message Sent Successfully!
+                  <CheckCircle2 className="w-5 h-5 text-[#0C3229]" /> Message Sent Successfully!
                 </div>
-                <p className="text-xs text-emerald-800 leading-relaxed">
+                <p className="text-xs text-slate-700 leading-relaxed">
                   Thank you for reaching out to Agape Mall. Our support team will review your inquiry and respond within 24 hours.
                 </p>
                 <button
                   onClick={() => setStatus('idle')}
-                  className="mt-2 text-xs font-bold text-emerald-700 underline cursor-pointer"
+                  className="mt-2 text-xs font-bold text-[#0C3229] underline cursor-pointer"
                 >
                   Send another message
                 </button>
@@ -135,7 +135,7 @@ export const Contact: React.FC = () => {
                       placeholder="e.g. Kwame Mensah"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full bg-[#F7F6F2] border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0C3229]"
                     />
                   </div>
 
@@ -147,7 +147,7 @@ export const Contact: React.FC = () => {
                       placeholder="kwame@example.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full bg-[#F7F6F2] border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0C3229]"
                     />
                   </div>
                 </div>
@@ -160,7 +160,7 @@ export const Contact: React.FC = () => {
                       placeholder="+233 20 123 4567"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full bg-[#F7F6F2] border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0C3229]"
                     />
                   </div>
 
@@ -169,7 +169,7 @@ export const Contact: React.FC = () => {
                     <select
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                      className="w-full bg-[#F7F6F2] border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0C3229]"
                     >
                       <option value="General Inquiry">General Inquiry</option>
                       <option value="Merchant Verification">Merchant Verification & Badges</option>
@@ -188,16 +188,16 @@ export const Contact: React.FC = () => {
                     placeholder="Provide details about your question or inquiry..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                    className="w-full bg-[#F7F6F2] border border-slate-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#0C3229]"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-sm py-3.5 rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                  className="w-full bg-[#0C3229] hover:bg-[#062019] text-white font-extrabold text-sm py-3.5 rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
                 >
-                  <Send className="w-4 h-4" />
+                  <Send className="w-4 h-4 text-[#D3B15F]" />
                   <span>{status === 'submitting' ? 'Sending Message...' : 'Send Message'}</span>
                 </button>
               </form>

@@ -3,20 +3,20 @@ import { Container } from '../components/common/Container';
 import { SectionHeader } from '../components/common/SectionHeader';
 import { BuyerBenefits } from '../components/home/BuyerBenefits';
 import { AppStoreButtons } from '../components/common/AppStoreButtons';
-import { ShieldAlert, Search, MessageSquare, CheckCircle2 } from 'lucide-react';
+import { PhoneMockup } from '../components/common/PhoneMockup';
 
 export const Buyers: React.FC = () => {
   return (
-    <div id="buyers-page" className="pt-28 pb-20 bg-slate-50 min-h-screen">
+    <div id="buyers-page" className="pt-28 pb-20 bg-[#F7F6F2] min-h-screen">
       <Container>
-        <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 mb-16 shadow-xl border border-slate-800 space-y-4">
-          <span className="inline-block px-3 py-1 bg-emerald-950 text-emerald-300 text-xs font-extrabold uppercase tracking-wider rounded-full border border-emerald-500/30">
+        <div className="bg-[#0C3229] text-white rounded-3xl p-8 sm:p-12 mb-16 shadow-xl border border-[#D3B15F]/30 space-y-4">
+          <span className="inline-block px-3 py-1 bg-[#062019] text-[#D3B15F] text-xs font-extrabold uppercase tracking-wider rounded-full border border-[#D3B15F]/30">
             For Smart Shoppers
           </span>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
             The Best Deals in Ghana, Right at Your Fingertips
           </h1>
-          <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
+          <p className="text-slate-200 text-base sm:text-lg max-w-2xl leading-relaxed">
             Discover thousands of smartphones, vehicles, electronics, fashion items, and apartments. Chat directly with sellers and pay safely after inspection.
           </p>
           <div className="pt-2">
@@ -24,7 +24,7 @@ export const Buyers: React.FC = () => {
           </div>
         </div>
 
-        {/* Buyer Step-by-Step Guide */}
+        {/* Real App Screenshot Preview Grid */}
         <div className="mb-16">
           <SectionHeader
             badge="Buyer Guide"
@@ -55,9 +55,9 @@ export const Buyers: React.FC = () => {
                 desc: 'Test the device or inspect condition thoroughly in person before handing over money.',
               },
             ].map((card, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-                <div className="text-2xl font-black text-emerald-600">{card.step}</div>
-                <h3 className="text-lg font-bold text-slate-900">{card.title}</h3>
+              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-xs space-y-3">
+                <div className="text-2xl font-black text-[#D3B15F]">{card.step}</div>
+                <h3 className="text-lg font-bold text-[#171A18]">{card.title}</h3>
                 <p className="text-xs text-slate-600 leading-relaxed">{card.desc}</p>
               </div>
             ))}

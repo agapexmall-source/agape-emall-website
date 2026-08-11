@@ -9,32 +9,32 @@ export const BuyerBenefits: React.FC = () => {
     {
       title: 'Massive Variety Across 13 Categories',
       description: 'Find everything from the latest smartphones and laptops to affordable housing, vehicles, and daily fashion.',
-      icon: <Tag className="w-5 h-5 text-emerald-600" />,
+      icon: <Tag className="w-5 h-5 text-[#D3B15F]" />,
     },
     {
       title: 'Make an Offer & Bargain Directly',
       description: 'Propose your preferred price directly inside the mobile app to get maximum value on every purchase.',
-      icon: <Sparkles className="w-5 h-5 text-amber-600" />,
+      icon: <Sparkles className="w-5 h-5 text-[#D3B15F]" />,
     },
     {
       title: 'Location-Based Nearby Discovery',
       description: 'Filter listings by town, city, or neighborhood (e.g. Osu, Spintex, East Legon, Adum) to buy close to home.',
-      icon: <Search className="w-5 h-5 text-teal-600" />,
+      icon: <Search className="w-5 h-5 text-[#D3B15F]" />,
     },
     {
-      title: 'Community Safety & Fraud Protection',
+      title: 'Community Safety & Anti-Fraud Tips',
       description: 'Clear safety alerts, report fraudulent listings with one tap, and shop with verified seller profiles.',
-      icon: <ShieldAlert className="w-5 h-5 text-emerald-700" />,
+      icon: <ShieldAlert className="w-5 h-5 text-[#D3B15F]" />,
     },
   ];
 
   return (
-    <section id="buyer-benefits" className="py-20 bg-slate-900 text-white border-b border-slate-800 overflow-hidden">
+    <section id="buyer-benefits" className="py-20 bg-[#0C3229] text-white border-b border-[#D3B15F]/20 overflow-hidden">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Visual Column */}
+          {/* Left Visual Column with Real Mobile Screenshot */}
           <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center">
-            <PhoneMockup activeScreen="listing" />
+            <PhoneMockup activeScreen="hotdeals" className="w-[280px] sm:w-[310px]" />
           </div>
 
           {/* Right Text Column */}
@@ -48,8 +48,8 @@ export const BuyerBenefits: React.FC = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
               {buyerFeatures.map((feature, idx) => (
-                <div key={idx} className="bg-slate-800/80 p-5 rounded-2xl border border-slate-700/80 space-y-3">
-                  <div className="w-10 h-10 rounded-xl bg-slate-900 flex items-center justify-center border border-slate-700">
+                <div key={idx} className="bg-[#062019] p-5 rounded-2xl border border-[#D3B15F]/30 space-y-3 shadow-md">
+                  <div className="w-10 h-10 rounded-xl bg-[#0C3229] flex items-center justify-center border border-[#D3B15F]/30">
                     {feature.icon}
                   </div>
                   <h3 className="text-base font-extrabold text-white">{feature.title}</h3>
@@ -58,12 +58,12 @@ export const BuyerBenefits: React.FC = () => {
               ))}
             </div>
 
-            <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 text-xs text-emerald-300 font-semibold">
-              <span className="flex items-center gap-1.5 bg-emerald-950/90 px-3 py-1.5 rounded-lg border border-emerald-500/30">
-                <Check className="w-4 h-4 text-amber-400" /> 100% Free for Buyers
+            <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center gap-4 text-xs text-[#D3B15F] font-semibold">
+              <span className="flex items-center gap-1.5 bg-[#062019] px-3 py-1.5 rounded-lg border border-[#D3B15F]/30">
+                <Check className="w-4 h-4 text-[#D3B15F]" /> 100% Free for Buyers
               </span>
-              <span className="flex items-center gap-1.5 bg-emerald-950/90 px-3 py-1.5 rounded-lg border border-emerald-500/30">
-                <Check className="w-4 h-4 text-amber-400" /> Direct Seller Contact
+              <span className="flex items-center gap-1.5 bg-[#062019] px-3 py-1.5 rounded-lg border border-[#D3B15F]/30">
+                <Check className="w-4 h-4 text-[#D3B15F]" /> Direct Seller Contact
               </span>
             </div>
           </div>

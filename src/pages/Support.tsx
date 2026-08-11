@@ -3,7 +3,7 @@ import { Container } from '../components/common/Container';
 import { SectionHeader } from '../components/common/SectionHeader';
 import { companyConfig } from '../config/company';
 import { faqItems } from '../config/faq';
-import { Mail, Phone, MessageSquare, Search, ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { Mail, Phone, MessageSquare, Search, ChevronDown, ChevronUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Support: React.FC = () => {
@@ -20,79 +20,79 @@ export const Support: React.FC = () => {
   });
 
   return (
-    <div id="support-page" className="pt-28 pb-20 bg-slate-50 min-h-screen">
+    <div id="support-page" className="pt-28 pb-20 bg-[#F7F6F2] min-h-screen">
       <Container>
         {/* Support Header */}
-        <div className="bg-slate-900 text-white rounded-3xl p-8 sm:p-12 mb-12 shadow-xl border border-slate-800 space-y-6">
+        <div className="bg-[#0C3229] text-white rounded-3xl p-8 sm:p-12 mb-12 shadow-xl border border-[#D3B15F]/30 space-y-6">
           <div className="max-w-2xl space-y-3">
-            <span className="inline-block px-3 py-1 bg-emerald-950 text-emerald-300 text-xs font-extrabold uppercase tracking-wider rounded-full border border-emerald-500/30">
+            <span className="inline-block px-3 py-1 bg-[#062019] text-[#D3B15F] text-xs font-extrabold uppercase tracking-wider rounded-full border border-[#D3B15F]/30">
               Help Center & Support
             </span>
             <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
               How Can We Help You Today?
             </h1>
-            <p className="text-slate-300 text-sm sm:text-base">
+            <p className="text-slate-200 text-sm sm:text-base">
               Search our help library or contact our dedicated customer support team directly.
             </p>
           </div>
 
           {/* Search Box */}
           <div className="relative max-w-xl">
-            <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+            <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-300" />
             <input
               type="text"
               placeholder="Search help topics (e.g. account deletion, verified badge, safety)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full bg-slate-800 text-white placeholder-slate-400 pl-12 pr-4 py-3.5 rounded-xl border border-slate-700 focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm"
+              className="w-full bg-[#062019] text-white placeholder-slate-400 pl-12 pr-4 py-3.5 rounded-xl border border-[#D3B15F]/30 focus:outline-none focus:ring-2 focus:ring-[#D3B15F] text-sm"
             />
           </div>
         </div>
 
         {/* Quick Contact Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
-          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-[#F7F6F2] text-[#0C3229] flex items-center justify-center border border-slate-200">
               <Mail className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-slate-900">Email Customer Support</h3>
+            <h3 className="text-base font-bold text-[#171A18]">Email Customer Support</h3>
             <p className="text-xs text-slate-500">Send an email inquiry for account or listing assistance.</p>
             <a
               href={`mailto:${companyConfig.supportEmail}`}
-              className="inline-block text-xs font-extrabold text-emerald-700 hover:underline pt-1"
+              className="inline-block text-xs font-extrabold text-[#0C3229] hover:underline pt-1"
             >
               {companyConfig.supportEmail}
             </a>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-[#F7F6F2] text-[#D3B15F] flex items-center justify-center border border-slate-200">
               <Phone className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-slate-900">Call Business Helpline</h3>
+            <h3 className="text-base font-bold text-[#171A18]">Call Business Helpline</h3>
             <p className="text-xs text-slate-500">Mon - Sat: 8:00 AM - 6:00 PM GMT</p>
             <a
               href={`tel:${companyConfig.businessPhone}`}
-              className="inline-block text-xs font-extrabold text-emerald-700 hover:underline pt-1"
+              className="inline-block text-xs font-extrabold text-[#0C3229] hover:underline pt-1"
             >
               {companyConfig.businessPhone}
             </a>
           </div>
 
-          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm space-y-3">
-            <div className="w-10 h-10 rounded-xl bg-teal-100 text-teal-700 flex items-center justify-center">
+          <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs space-y-3">
+            <div className="w-10 h-10 rounded-xl bg-[#F7F6F2] text-[#0C3229] flex items-center justify-center border border-slate-200">
               <MessageSquare className="w-5 h-5" />
             </div>
-            <h3 className="text-base font-bold text-slate-900">In-App Live Chat</h3>
+            <h3 className="text-base font-bold text-[#171A18]">In-App Live Chat</h3>
             <p className="text-xs text-slate-500">Reach our team directly inside your mobile app settings.</p>
-            <Link to="/download" className="inline-block text-xs font-extrabold text-emerald-700 hover:underline pt-1">
+            <Link to="/download" className="inline-block text-xs font-extrabold text-[#0C3229] hover:underline pt-1">
               Open Mobile App
             </Link>
           </div>
         </div>
 
         {/* FAQ Accordion Section */}
-        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm space-y-6">
+        <div className="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xs space-y-6">
           <SectionHeader
             badge="Frequently Asked Questions"
             title="Common Questions & Solutions"
@@ -115,8 +115,8 @@ export const Support: React.FC = () => {
                 onClick={() => setSelectedCategory(tab.id)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                   selectedCategory === tab.id
-                    ? 'bg-emerald-600 text-white shadow-sm'
-                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                    ? 'bg-[#0C3229] text-[#D3B15F] shadow-xs'
+                    : 'bg-[#F7F6F2] text-slate-700 hover:bg-slate-200'
                 }`}
               >
                 {tab.label}
@@ -140,11 +140,11 @@ export const Support: React.FC = () => {
                   >
                     <button
                       onClick={() => setOpenFAQId(isOpen ? null : faq.id)}
-                      className="w-full text-left p-5 bg-slate-50 hover:bg-slate-100/80 flex items-center justify-between gap-4 font-bold text-slate-900 text-sm sm:text-base cursor-pointer"
+                      className="w-full text-left p-5 bg-[#F7F6F2] hover:bg-slate-100 flex items-center justify-between gap-4 font-bold text-[#171A18] text-sm sm:text-base cursor-pointer"
                     >
                       <span>{faq.question}</span>
                       {isOpen ? (
-                        <ChevronUp className="w-5 h-5 text-emerald-600 shrink-0" />
+                        <ChevronUp className="w-5 h-5 text-[#0C3229] shrink-0" />
                       ) : (
                         <ChevronDown className="w-5 h-5 text-slate-400 shrink-0" />
                       )}
