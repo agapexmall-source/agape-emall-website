@@ -41,7 +41,7 @@ export const CategorySection: React.FC = () => {
         <SectionHeader
           badge="Browse Marketplace"
           title="Explore 13 Primary Commerce Categories"
-          subtitle="Everything you need to buy, sell, or trade is organized intuitively inside the Agape Mall mobile app."
+          subtitle="Everything you need to buy, sell, or trade is organized intuitively inside the Agape e-Mall mobile app."
         />
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
@@ -77,7 +77,7 @@ export const CategorySection: React.FC = () => {
             to="/download"
             className="inline-flex items-center gap-2 bg-[#0C3229] hover:bg-[#062019] text-white font-bold text-sm px-6 py-3.5 rounded-xl shadow-md transition-colors"
           >
-            <span>Open Agape Mall App to View All Listings</span>
+            <span>Open Agape e-Mall App to View All Listings</span>
             <ArrowUpRight className="w-4 h-4 text-[#D3B15F]" />
           </Link>
         </div>

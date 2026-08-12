@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
             <Link
               to="/"
               className="inline-block focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D3B15F]"
-              aria-label="Agape Mall home"
+              aria-label="Agape e-Mall home"
             >
               <img
                 src="/brand/logo.png"
@@ -32,7 +32,7 @@ export const Footer: React.FC = () => {
             </Link>
 
             <p className="max-w-sm text-sm leading-relaxed text-slate-300">
-              Agape Mall empowers buyers to discover great local
+              Agape e-Mall empowers buyers to discover great local
               deals and gives sellers direct access to thousands
               of daily active customers across Ghana.
             </p>
@@ -81,7 +81,7 @@ export const Footer: React.FC = () => {
                   to="/about"
                   className="transition-colors hover:text-[#D3B15F]"
                 >
-                  About Agape Mall
+                  About Agape e-Mall
                 </Link>
               </li>
 
@@ -209,7 +209,7 @@ export const Footer: React.FC = () => {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
             <span className="flex items-center gap-1.5 text-slate-300">
               <CheckCircle2 className="h-3.5 w-3.5 text-[#D3B15F]" />
-              Official Agape Mall Portal
+              Official Agape e-Mall Portal
             </span>
 
             <span>

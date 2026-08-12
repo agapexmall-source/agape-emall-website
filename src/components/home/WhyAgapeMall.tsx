@@ -32,7 +32,7 @@ export const WhyAgapeMall: React.FC = () => {
       <Container>
         <SectionHeader
           badge="Marketplace Trust"
-          title="Why Millions Choose Agape Mall"
+          title="Why Millions Choose Agape e-Mall"
           subtitle="We combine intuitive mobile technology with strict community safety protocols to make local commerce seamless."
         />
 

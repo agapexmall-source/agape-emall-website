@@ -15,7 +15,7 @@ export const Download: React.FC = () => {
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-white leading-tight">
             Download the Official <br />
-            <span className="text-[#D3B15F]">Agape Mall</span> Mobile App
+            <span className="text-[#D3B15F]">Agape e-Mall</span> Mobile App
           </h1>
           <p className="text-slate-200 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
             Get instant access to thousands of listings across Ghana. Available free on Android smartphones via Google Play and iPhone/iPad via Apple App Store.

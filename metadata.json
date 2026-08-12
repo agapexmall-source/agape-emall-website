@@ -1,6 +1,6 @@
 {
-  "name": "Agape Mall",
-  "description": "Official web platform and landing portal for Agape Mall digital marketplace.",
+  "name": "Agape e-Mall",
+  "description": "Official web platform and landing portal for Agape e-Mall digital marketplace.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": []
 }

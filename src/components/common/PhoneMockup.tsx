@@ -29,7 +29,7 @@ const screenshotMap: Record<string, string> = {
 export const PhoneMockup: React.FC<PhoneMockupProps> = ({
   src,
   activeScreen = 'home',
-  alt = 'Agape Mall mobile app screenshot',
+  alt = 'Agape e-Mall mobile app screenshot',
   className = '',
   id,
   priority = false,

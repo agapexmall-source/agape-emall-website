@@ -75,7 +75,7 @@ export const QRCodeGenerator: React.FC<QRCodeGeneratorProps> = ({
           <rect x="56" y="80" width="8" height="12" fill="#047857" />
           <rect x="78" y="80" width="12" height="12" fill="#0f172a" />
 
-          {/* Agape Mall Center Icon Badge */}
+          {/* Agape e-Mall Center Icon Badge */}
           <rect x="42" y="42" width="16" height="16" rx="4" fill="#047857" />
           <text
             x="50"

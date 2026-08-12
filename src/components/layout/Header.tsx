@@ -51,7 +51,7 @@ export const Header: React.FC = () => {
           <Link
             to="/"
             className="flex shrink-0 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D3B15F]"
-            aria-label="Agape Mall home"
+            aria-label="Agape e-Mall home"
           >
             <img
               src="/brand/logo.png"

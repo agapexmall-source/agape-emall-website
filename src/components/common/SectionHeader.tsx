@@ -20,18 +20,78 @@ export const SectionHeader: React.FC<SectionHeaderProps> = ({
   return (
     <div
       id={id}
-      className={`mb-12 max-w-3xl ${centered ? 'mx-auto text-center' : ''} ${className}`}
+      className={`
+        mb-12
+        max-w-3xl
+        ${centered ? 'mx-auto text-center' : ''}
+        ${className}
+      `}
     >
       {badge && (
-        <span className="inline-block px-3.5 py-1 mb-3 text-xs font-extrabold tracking-wider uppercase text-[#0C3229] bg-[#D3B15F]/20 rounded-full border border-[#D3B15F]/40 shadow-2xs">
+        <span
+          className="
+            inline-flex
+            items-center
+            justify-center
+
+            px-4
+            py-2
+            mb-4
+
+            text-xs
+            sm:text-sm
+
+            font-black
+            tracking-[0.08em]
+            uppercase
+
+            text-[#062019]
+            bg-[#D3B15F]
+
+            border
+            border-[#E7CB7A]
+
+            rounded-full
+
+            shadow-sm
+
+            leading-none
+          "
+        >
           {badge}
         </span>
       )}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-inherit tracking-tight leading-snug">
+
+      <h2
+        className="
+          text-2xl
+          sm:text-3xl
+          md:text-4xl
+
+          font-black
+          text-inherit
+
+          tracking-tight
+          leading-[1.15]
+        "
+      >
         {title}
       </h2>
+
       {subtitle && (
-        <p className="mt-3.5 text-base sm:text-lg opacity-85 leading-relaxed font-normal">
+        <p
+          className="
+            mt-4
+
+            text-base
+            sm:text-lg
+
+            opacity-90
+
+            leading-relaxed
+            font-normal
+          "
+        >
           {subtitle}
         </p>
       )}

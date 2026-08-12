@@ -86,7 +86,7 @@ export const AppShowcase: React.FC = () => {
       <Container>
         <SectionHeader
           badge="Real App Screenshots"
-          title="Experience Agape Mall in Your Pocket"
+          title="Experience Agape e-Mall in Your Pocket"
           subtitle="Designed for maximum speed, intuitive search, and instant buyer-seller communication on any smartphone."
         />
 
@@ -173,7 +173,7 @@ export const AppShowcase: React.FC = () => {
                 </div>
 
                 <p className="mt-1 text-xs text-slate-500">
-                  Actual Agape Mall mobile app screen
+                  Actual Agape e-Mall mobile app screen
                 </p>
               </div>
             </div>

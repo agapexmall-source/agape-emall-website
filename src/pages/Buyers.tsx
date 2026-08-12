@@ -28,7 +28,7 @@ export const Buyers: React.FC = () => {
         <div className="mb-16">
           <SectionHeader
             badge="Buyer Guide"
-            title="How to Shop Safely on Agape Mall"
+            title="How to Shop Safely on Agape e-Mall"
             subtitle="Follow these 4 simple steps to enjoy seamless, stress-free transactions."
           />
 

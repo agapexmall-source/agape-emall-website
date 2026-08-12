@@ -98,7 +98,7 @@ export const About: React.FC = () => {
 
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-between bg-[#0C3229] text-white p-6 rounded-2xl gap-4 border border-[#D3B15F]/30">
             <div>
-              <div className="text-lg font-extrabold">Ready to explore the Agape Mall app?</div>
+              <div className="text-lg font-extrabold">Ready to explore the Agape e-Mall app?</div>
               <div className="text-xs text-slate-300">Download free today on iOS & Android.</div>
             </div>
             <AppStoreButtons layout="row" size="md" />

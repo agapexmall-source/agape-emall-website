@@ -42,7 +42,7 @@ export const BuyerBenefits: React.FC = () => {
             <SectionHeader
               badge="For Smart Shoppers"
               title="Shop Smarter, Save Bigger Across Ghana"
-              subtitle="Agape Mall provides a seamless shopping experience with zero middleman markups."
+              subtitle="Agape e-Mall provides a seamless shopping experience with zero middleman markups."
               centered={false}
             />
 

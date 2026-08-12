@@ -9,7 +9,7 @@ export const HowItWorks: React.FC = () => {
       stepNumber: '01',
       icon: <Download className="w-6 h-6 text-[#0C3229]" />,
       title: 'Download & Register',
-      description: 'Get the free Agape Mall app on Android or iOS. Create your account using your mobile phone number or email.',
+      description: 'Get the free Agape e-Mall app on Android or iOS. Create your account using your mobile phone number or email.',
     },
     {
       stepNumber: '02',
@@ -36,7 +36,7 @@ export const HowItWorks: React.FC = () => {
       <Container>
         <SectionHeader
           badge="Simple & Direct"
-          title="How Agape Mall Works for You"
+          title="How Agape e-Mall Works for You"
           subtitle="Whether you're shopping for bargains or listing your business inventory, getting started takes under two minutes."
         />
 

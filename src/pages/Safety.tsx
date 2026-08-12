@@ -16,7 +16,7 @@ export const Safety: React.FC = () => {
             Your Safety is Our Top Priority
           </h1>
           <p className="text-slate-300 text-base sm:text-lg max-w-2xl leading-relaxed">
-            Agape Mall is committed to maintaining a safe, transparent, and authentic marketplace. Review these essential security rules before buying or selling.
+            Agape e-Mall is committed to maintaining a safe, transparent, and authentic marketplace. Review these essential security rules before buying or selling.
           </p>
         </div>
 
@@ -54,7 +54,7 @@ export const Safety: React.FC = () => {
               <h3 className="text-lg font-extrabold text-slate-900">Keep OTP Codes & Passwords Private</h3>
             </div>
             <p className="text-xs text-slate-600 leading-relaxed">
-              Agape Mall staff will NEVER call or text asking for your SMS verification code, mobile money PIN, or password. Keep them strictly confidential.
+              Agape e-Mall staff will NEVER call or text asking for your SMS verification code, mobile money PIN, or password. Keep them strictly confidential.
             </p>
           </div>
 

@@ -38,7 +38,7 @@ export const SellerBenefits: React.FC = () => {
             <SectionHeader
               badge="For Businesses & Merchants"
               title="Grow Your Sales, Reach Thousands of Daily Customers"
-              subtitle="Whether you're selling a single laptop or managing a commercial electronics shop, Agape Mall accelerates your turnover."
+              subtitle="Whether you're selling a single laptop or managing a commercial electronics shop, Agape e-Mall accelerates your turnover."
               centered={false}
             />
 

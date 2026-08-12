@@ -22,7 +22,7 @@ export const FinalCTA: React.FC = () => {
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
                 Ready to Experience <br />
-                <span className="text-[#D3B15F]">Agape Mall</span> on Your Phone?
+                <span className="text-[#D3B15F]">Agape e-Mall</span> on Your Phone?
               </h2>
 
               <p className="text-base text-slate-200 max-w-xl leading-relaxed">

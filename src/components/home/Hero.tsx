@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
           <div className="space-y-6 text-left lg:col-span-6">
             <div className="inline-flex items-center gap-2 rounded-full border border-[#D3B15F]/40 bg-[#062019]/70 px-3.5 py-1.5 text-xs font-extrabold tracking-wide text-[#D3B15F] sm:text-sm">
               <Sparkles className="h-4 w-4" />
-              <span>Ghana&apos;s Official Agape Mall Web Portal</span>
+              <span>Ghana&apos;s Official Agape e-Mall Web Portal</span>
             </div>
 
             <h1 className="text-4xl font-black leading-[1.08] tracking-tight text-white sm:text-5xl lg:text-6xl">
@@ -37,7 +37,7 @@ export const Hero: React.FC = () => {
             <p className="max-w-2xl text-base leading-relaxed text-slate-200 sm:text-xl">
               Connect directly with verified buyers and trusted sellers across
               Ghana. Browse smartphones, electronics, vehicles, real estate,
-              fashion, and everyday goods on the Agape Mall mobile app.
+              fashion, and everyday goods on the Agape e-Mall mobile app.
             </p>
 
             <div className="space-y-4 pt-2">
@@ -129,7 +129,7 @@ export const Hero: React.FC = () => {
               <div className="absolute left-0 top-24 z-10 hidden w-[175px] -rotate-2 opacity-75 xl:block">
                 <PhoneMockup
                   activeScreen="hotdeals"
-                  alt="Agape Mall Hot Deals screen"
+                  alt="Agape e-Mall Hot Deals screen"
                   className="w-full"
                 />
               </div>
@@ -137,7 +137,7 @@ export const Hero: React.FC = () => {
               <div className="relative z-20 w-[245px] sm:w-[285px] lg:w-[300px]">
                 <PhoneMockup
                   activeScreen="home"
-                  alt="Agape Mall app homepage"
+                  alt="Agape e-Mall app homepage"
                   priority
                   className="w-full"
                 />
@@ -146,7 +146,7 @@ export const Hero: React.FC = () => {
               <div className="absolute right-0 top-32 z-10 hidden w-[175px] rotate-2 opacity-75 xl:block">
                 <PhoneMockup
                   activeScreen="details"
-                  alt="Agape Mall product details screen"
+                  alt="Agape e-Mall product details screen"
                   className="w-full"
                 />
               </div>

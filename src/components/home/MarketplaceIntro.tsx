@@ -27,7 +27,7 @@ export const MarketplaceIntro: React.FC = () => {
       icon: <ShieldCheck className="w-6 h-6 text-[#D3B15F]" />,
       title: 'Verified Merchant Profiles',
       description:
-        'Shop with confidence. Verified merchant badges, user ratings, and community moderation keep the Agape Mall marketplace safe and trustworthy for everyone.',
+        'Shop with confidence. Verified merchant badges, user ratings, and community moderation keep the Agape e-Mall marketplace safe and trustworthy for everyone.',
     },
   ];
 
@@ -35,9 +35,9 @@ export const MarketplaceIntro: React.FC = () => {
     <section id="marketplace-intro" className="py-20 bg-[#F7F6F2] border-b border-slate-200">
       <Container>
         <SectionHeader
-          badge="Welcome to Agape Mall"
+          badge="Welcome to Agape e-Mall"
           title="Ghana's Premier Digital Marketplace Experience"
-          subtitle="Agape Mall connects millions of buyers and sellers, empowering local commerce with speed, transparency, and trust."
+          subtitle="Agape e-Mall connects millions of buyers and sellers, empowering local commerce with speed, transparency, and trust."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
