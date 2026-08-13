@@ -5,7 +5,8 @@ import { Container } from '../common/Container';
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] =
+    useState(false);
 
   const location = useLocation();
 
@@ -15,9 +16,11 @@ export const Header: React.FC = () => {
     };
 
     handleScroll();
+
     window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () =>
+      window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -39,15 +42,15 @@ export const Header: React.FC = () => {
       id="agape-main-header"
       className={`fixed left-0 right-0 top-0 z-50 border-b transition-all duration-300 ${
         isScrolled
-          ? 'border-slate-200/90 bg-white/95 py-2 shadow-md backdrop-blur-md'
-          : 'border-[#D3B15F]/25 bg-[#F7F6F2]/95 py-3 backdrop-blur-sm'
+          ? 'border-[#D3B15F]/25 bg-[#062019]/95 py-2 shadow-lg backdrop-blur-md'
+          : 'border-[#D3B15F]/20 bg-[#0C3229] py-3'
       }`}
     >
       <Container>
         <div className="flex items-center justify-between gap-4">
           <Link
             to="/"
-            className="flex shrink-0 items-center rounded-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D3B15F] focus-visible:ring-offset-2"
+            className="flex shrink-0 items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D3B15F]"
             aria-label="Agape e-Mall home"
           >
             <img
@@ -62,16 +65,17 @@ export const Header: React.FC = () => {
             aria-label="Main navigation"
           >
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive =
+                location.pathname === link.path;
 
               return (
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`rounded-lg px-3 py-2 text-sm font-semibold transition-all duration-200 ${
+                  className={`rounded-lg px-3 py-2 text-sm font-semibold transition-colors ${
                     isActive
-                      ? 'bg-[#0C3229] text-white shadow-sm ring-1 ring-[#0C3229]/10'
-                      : 'text-[#27342F] hover:bg-[#0C3229]/7 hover:text-[#0C3229]'
+                      ? 'bg-[#062019] text-[#D3B15F] ring-1 ring-[#D3B15F]/30'
+                      : 'text-slate-100 hover:bg-[#062019]/60 hover:text-[#D3B15F]'
                   }`}
                 >
                   {link.name}
@@ -83,17 +87,19 @@ export const Header: React.FC = () => {
           <div className="hidden shrink-0 sm:flex">
             <Link
               to="/download"
-              className="inline-flex items-center gap-2 rounded-xl bg-[#0C3229] px-4 py-2.5 text-sm font-extrabold text-white shadow-md transition-all duration-200 hover:bg-[#062019] hover:shadow-lg"
+              className="inline-flex items-center gap-2 rounded-xl bg-[#D3B15F] px-4 py-2.5 text-sm font-extrabold text-[#062019] shadow-md transition-colors hover:bg-[#CEAE66]"
             >
-              <Download className="h-4 w-4 text-[#D3B15F]" />
+              <Download className="h-4 w-4" />
               <span>Get Mobile App</span>
             </Link>
           </div>
 
           <button
             type="button"
-            onClick={() => setIsMobileMenuOpen((open) => !open)}
-            className="rounded-xl border border-[#0C3229]/15 bg-white p-2 text-[#0C3229] shadow-sm transition-colors hover:border-[#D3B15F]/50 hover:bg-[#F7F6F2] lg:hidden"
+            onClick={() =>
+              setIsMobileMenuOpen((open) => !open)
+            }
+            className="rounded-xl border border-[#D3B15F]/20 p-2 text-slate-100 transition-colors hover:bg-[#062019] hover:text-[#D3B15F] lg:hidden"
             aria-label={
               isMobileMenuOpen
                 ? 'Close navigation menu'
@@ -111,11 +117,12 @@ export const Header: React.FC = () => {
 
         {isMobileMenuOpen && (
           <nav
-            className="mt-3 flex flex-col gap-1.5 border-t border-slate-200 pb-2 pt-3 lg:hidden"
+            className="mt-3 flex flex-col gap-1.5 border-t border-[#D3B15F]/20 pb-2 pt-3 lg:hidden"
             aria-label="Mobile navigation"
           >
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive =
+                location.pathname === link.path;
 
               return (
                 <Link
@@ -123,8 +130,8 @@ export const Header: React.FC = () => {
                   to={link.path}
                   className={`flex items-center justify-between rounded-xl px-4 py-2.5 text-base font-semibold transition-colors ${
                     isActive
-                      ? 'border border-[#0C3229]/10 bg-[#0C3229] text-white'
-                      : 'text-[#27342F] hover:bg-[#F7F6F2] hover:text-[#0C3229]'
+                      ? 'border border-[#D3B15F]/30 bg-[#062019] text-[#D3B15F]'
+                      : 'text-slate-100 hover:bg-[#062019] hover:text-[#D3B15F]'
                   }`}
                 >
                   <span>{link.name}</span>
@@ -136,12 +143,12 @@ export const Header: React.FC = () => {
               );
             })}
 
-            <div className="mt-2 border-t border-slate-200 pt-3 sm:hidden">
+            <div className="mt-2 border-t border-[#D3B15F]/20 pt-3 sm:hidden">
               <Link
                 to="/download"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#0C3229] py-3 text-base font-extrabold text-white shadow-md"
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#D3B15F] py-3 text-base font-extrabold text-[#062019]"
               >
-                <Download className="h-5 w-5 text-[#D3B15F]" />
+                <Download className="h-5 w-5" />
                 <span>Download App</span>
               </Link>
             </div>

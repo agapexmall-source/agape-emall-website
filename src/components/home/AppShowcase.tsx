@@ -81,7 +81,7 @@ export const AppShowcase: React.FC = () => {
   return (
     <section
       id="app-showcase"
-      className="border-b border-slate-200 bg-[#F7F6F2] py-20"
+      className="border-b border-slate-200 bg-white py-20"
     >
       <Container>
         <SectionHeader
@@ -103,8 +103,8 @@ export const AppShowcase: React.FC = () => {
                   onClick={() => setActiveTab(tab.id)}
                   className={`w-full rounded-2xl border p-4 text-left transition-all ${
                     isSelected
-                      ? 'border-[#0C3229] bg-white shadow-sm ring-1 ring-[#0C3229]/10'
-                      : 'border-slate-200 bg-white/75 hover:border-[#D3B15F]/50 hover:bg-white'
+                      ? 'border-[#0C3229] bg-[#F7F6F2] shadow-sm ring-1 ring-[#0C3229]/10'
+                      : 'border-slate-200 bg-white hover:border-[#D3B15F]/50 hover:bg-[#F7F6F2]/50'
                   }`}
                   aria-pressed={isSelected}
                 >
