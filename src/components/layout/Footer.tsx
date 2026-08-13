@@ -18,6 +18,7 @@ export const Footer: React.FC = () => {
     >
       <Container>
         <div className="grid grid-cols-1 gap-10 border-b border-[#D3B15F]/20 pb-12 md:grid-cols-2 lg:grid-cols-5">
+          {/* Brand & Contact Information */}
           <div className="space-y-4 lg:col-span-2">
             <Link
               to="/"
@@ -38,29 +39,37 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="flex flex-col gap-2.5 pt-2 text-xs text-slate-200">
+              {/* Address */}
               <div className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#D3B15F]" />
-                <span>
-                  {companyConfig.businessAddress}
-                </span>
+                <span>{companyConfig.businessAddress}</span>
               </div>
 
+              {/* Phone */}
               <div className="flex items-center gap-2.5">
                 <Phone className="h-4 w-4 shrink-0 text-[#D3B15F]" />
-                <span>
+                <a
+                  href={`tel:${companyConfig.businessPhone.replace(/\s+/g, '')}`}
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   {companyConfig.businessPhone}
-                </span>
+                </a>
               </div>
 
+              {/* Email */}
               <div className="flex items-center gap-2.5">
                 <Mail className="h-4 w-4 shrink-0 text-[#D3B15F]" />
-                <span>
+                <a
+                  href={`mailto:${companyConfig.businessEmail}`}
+                  className="transition-colors hover:text-[#D3B15F]"
+                >
                   {companyConfig.businessEmail}
-                </span>
+                </a>
               </div>
             </div>
           </div>
 
+          {/* Marketplace */}
           <div>
             <h3 className="mb-4 border-b border-[#D3B15F]/20 pb-2 text-xs font-extrabold uppercase tracking-wider text-[#D3B15F]">
               Marketplace
@@ -114,6 +123,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Support */}
           <div>
             <h3 className="mb-4 border-b border-[#D3B15F]/20 pb-2 text-xs font-extrabold uppercase tracking-wider text-[#D3B15F]">
               Support &amp; Help
@@ -158,6 +168,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
+          {/* Legal */}
           <div>
             <h3 className="mb-4 border-b border-[#D3B15F]/20 pb-2 text-xs font-extrabold uppercase tracking-wider text-[#D3B15F]">
               Legal &amp; Policies
@@ -194,15 +205,14 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
+        {/* Bottom Footer */}
         <div className="flex flex-col items-start justify-between gap-4 pt-8 text-xs text-slate-400 md:flex-row md:items-center">
           <div className="flex items-start gap-2">
             <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-[#D3B15F]" />
 
             <span>
               © {new Date().getFullYear()}{' '}
-              {companyConfig.legalCompanyName}. All rights
-              reserved. Registered under Reg. No.{' '}
-              {companyConfig.companyRegistrationNumber}.
+              {companyConfig.legalCompanyName}. All rights reserved.
             </span>
           </div>
 
@@ -213,8 +223,7 @@ export const Footer: React.FC = () => {
             </span>
 
             <span>
-              Ghana Jurisdiction (
-              {companyConfig.jurisdiction})
+              Ghana Jurisdiction ({companyConfig.jurisdiction})
             </span>
           </div>
         </div>
