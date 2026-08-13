@@ -32,7 +32,7 @@ export const MarketplaceIntro: React.FC = () => {
   ];
 
   return (
-    <section id="marketplace-intro" className="py-20 bg-[#F7F6F2] border-b border-slate-200">
+    <section id="marketplace-intro" className="border-b border-slate-200 bg-white py-20">
       <Container>
         <SectionHeader
           badge="Welcome to Agape e-Mall"
@@ -40,18 +40,22 @@ export const MarketplaceIntro: React.FC = () => {
           subtitle="Agape e-Mall connects millions of buyers and sellers, empowering local commerce with speed, transparency, and trust."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {introPoints.map((item, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-xs hover:shadow-md hover:border-[#0C3229] transition-all duration-200 flex flex-col justify-between"
+              className="flex flex-col justify-between rounded-2xl border border-slate-200/80 bg-[#F7F6F2] p-6 shadow-xs transition-all duration-200 hover:-translate-y-1 hover:border-[#D3B15F]/60 hover:bg-white hover:shadow-md"
             >
               <div className="space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-[#F7F6F2] flex items-center justify-center border border-slate-200">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#D3B15F]/20 bg-white shadow-sm">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold text-[#171A18] tracking-tight">{item.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-bold tracking-tight text-[#171A18]">
+                  {item.title}
+                </h3>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  {item.description}
+                </p>
               </div>
             </div>
           ))}

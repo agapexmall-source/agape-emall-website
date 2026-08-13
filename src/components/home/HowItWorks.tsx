@@ -32,7 +32,7 @@ export const HowItWorks: React.FC = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-20 bg-white border-b border-slate-200">
+    <section id="how-it-works" className="border-b border-slate-200 bg-[#F7F6F2] py-20">
       <Container>
         <SectionHeader
           badge="Simple & Direct"
@@ -40,22 +40,26 @@ export const HowItWorks: React.FC = () => {
           subtitle="Whether you're shopping for bargains or listing your business inventory, getting started takes under two minutes."
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+        <div className="relative grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative bg-[#F7F6F2] p-6 rounded-2xl border border-slate-200 hover:border-[#0C3229] transition-all duration-200"
+              className="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-[#D3B15F]/60 hover:shadow-md"
             >
-              <div className="flex items-center justify-between mb-4">
-                <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center shadow-xs">
+              <div className="mb-4 flex items-center justify-between">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-slate-200 bg-[#F7F6F2] shadow-xs">
                   {step.icon}
                 </div>
-                <span className="text-2xl font-black text-[#D3B15F] tracking-wider">
+                <span className="text-2xl font-black tracking-wider text-[#B38F3E]">
                   {step.stepNumber}
                 </span>
               </div>
-              <h3 className="text-lg font-extrabold text-[#171A18] mb-2">{step.title}</h3>
-              <p className="text-sm text-slate-600 leading-relaxed">{step.description}</p>
+              <h3 className="mb-2 text-lg font-extrabold text-[#171A18]">
+                {step.title}
+              </h3>
+              <p className="text-sm leading-relaxed text-slate-600">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>
