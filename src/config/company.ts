@@ -20,9 +20,9 @@ export const companyConfig: CompanyConfig = {
   businessAddress: 'P.O.Box CT3878, Cantoments-Accra, Ghana',
   businessPhone: '+233 24 889 1389',
 
-  businessEmail: 'agape.xmall@gmail.com',
-  supportEmail: 'agape.xmall@gmail.com',
-  privacyEmail: 'agape.xmall@gmail.com',
+  businessEmail: 'info@theagapemall.com',
+  supportEmail: 'info@theagapemall.com',
+  privacyEmail: 'info@theagapemall.com',
 
   jurisdiction: 'Republic of Ghana',
 
